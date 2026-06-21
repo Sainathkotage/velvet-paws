@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velvet Paws | Premium Pet Grooming & Spa</title>
+  <meta name="description" content="Professional, gentle, and eco-friendly pet grooming in a stress-free environment. A luxury spa experience for your beloved pets.">
+  
+  <!-- Google Fonts: Outfit (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Leaflet Map CSS for clean styled map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header id="header" class="site-header">
+    <div class="container header-container">
+      <a href="#" class="logo" id="logo">
+        <span class="logo-icon"><i data-lucide="scissors"></i></span>
+        <span class="logo-text">Velvet Paws</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        </ul>
+      </nav>
+      
+      <div class="nav-cta-container">
+        <a href="#booking" class="btn btn-primary nav-cta">Book Now</a>
+        <button class="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Navigation -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <nav class="mobile-nav" aria-label="Mobile Navigation">
+      <ul>
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#services" class="mobile-nav-link">Services</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#pricing" class="mobile-nav-link">Pricing</a></li>
+        <li><a href="#testimonials" class="mobile-nav-link">Reviews</a></li>
+        <li><a href="#booking" class="mobile-nav-link btn btn-primary">Book an Appointment</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-bg-overlay"></div>
+      <div class="container hero-container">
+        <div class="hero-content fade-in-up">
+          <span class="hero-subtitle">Premium Spa Experience</span>
+          <h1 class="hero-title">Your Pet, Perfectly Groomed.</h1>
+          <p class="hero-text">Professional grooming in a calm, stress-free environment designed for your pet's comfort and well-being.</p>
+          <div class="hero-actions">
+            <a href="#booking" class="btn btn-primary btn-lg">Book an Appointment</a>
+            <a href="#services" class="btn btn-outline btn-lg">Explore Services</a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper fade-in-up delay-200">
+          <div class="hero-image-glow"></div>
+          <div class="hero-image-container">
+            <img src="/images/hero-dog.png" alt="Happy, clean, and groomed dog sitting relaxed" class="hero-img" loading="eager">
+          </div>
+          <div class="hero-badge hero-badge-top">
+            <span class="badge-icon"><i data-lucide="sparkles"></i></span>
+            <div class="badge-text">
+              <span class="badge-title">5-Star Spa</span>
+              <span class="badge-sub">Rated by 1.2k+ pets</span>
+            </div>
+          </div>
+          <div class="hero-badge hero-badge-bottom">
+            <span class="badge-icon"><i data-lucide="shield-check"></i></span>
+            <div class="badge-text">
+              <span class="badge-title">Certified Groomers</span>
+              <span class="badge-sub">Gentle & caring care</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section section-padding">
+      <div class="container">
+        <div class="section-header text-center fade-in-up">
+          <span class="section-subtitle">Our Expertise</span>
+          <h2 class="section-title">Nurturing Services</h2>
+          <p class="section-text">Every service is tailored to your pet's breed, coat type, and individual personality to ensure a relaxing visit.</p>
+        </div>
+        
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <div class="service-card fade-in-up delay-100">
+            <div class="service-icon">
+              <i data-lucide="bath"></i>
+            </div>
+            <h3 class="service-title">Bath & Blow Dry</h3>
+            <p class="service-desc">Hydro-massage wash, premium natural shampoo, warm blow dry, full brush out, and ear cleaning.</p>
+            <div class="service-footer">
+              <span class="service-price">From $45</span>
+              <a href="#booking" class="service-link">Select <i data-lucide="arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="service-card fade-in-up delay-200">
+            <div class="service-icon">
+              <i data-lucide="scissors"></i>
+            </div>
+            <h3 class="service-title">Full Groom</h3>
+            <p class="service-desc">Includes Bath & Blow Dry, custom breed-standard haircut, sanitary trim, and detailed styling.</p>
+            <div class="service-footer">
+              <span class="service-price">From $75</span>
+              <a href="#booking" class="service-link">Select <i data-lucide="arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card fade-in-up delay-300">
+            <div class="service-icon">
+              <i data-lucide="sparkles"></i>
+            </div>
+            <h3 class="service-title">Nail Trim & File</h3>
+            <p class="service-desc">Precision nail clipping and grinding for smooth edges, protecting your floors and their paws.</p>
+            <div class="service-footer">
+              <span class="service-price">From $20</span>
+              <a href="#booking" class="service-link">Select <i data-lucide="arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="service-card fade-in-up delay-100">
+            <div class="service-icon">
+              <i data-lucide="heart"></i>
+            </div>
+            <h3 class="service-title">Teeth Cleaning</h3>
+            <p class="service-desc">Enzymatic brushing and breath freshening spray to promote optimal dental hygiene and fresh breath.</p>
+            <div class="service-footer">
+              <span class="service-price">From $25</span>
+              <a href="#booking" class="service-link">Select <i data-lucide="arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="service-card fade-in-up delay-200">
+            <div class="service-icon">
+              <i data-lucide="wind"></i>
+            </div>
+            <h3 class="service-title">De-shedding Treatment</h3>
+            <p class="service-desc">Undercoat blowout, FURminator brushing, and specialized deshedding shampoo to reduce shedding up to 90%.</p>
+            <div class="service-footer">
+              <span class="service-price">From $60</span>
+              <a href="#booking" class="service-link">Select <i data-lucide="arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="service-card fade-in-up delay-300">
+            <div class="service-icon">
+              <i data-lucide="smile"></i>
+            </div>
+            <h3 class="service-title">Puppy's First Groom</h3>
+            <p class="service-desc">A gentle, patient introduction to grooming for puppies under 6 months. Slow, positive reinforcement focus.</p>
+            <div class="service-footer">
+              <span class="service-price">From $35</span>
+              <a href="#booking" class="service-link">Select <i data-lucide="arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="process" class="process-section section-padding bg-cream-dark">
+      <div class="container">
+        <div class="section-header text-center fade-in-up">
+          <span class="section-subtitle">Easy & Stress-Free</span>
+          <h2 class="section-title">How It Works</h2>
+          <p class="section-text">We make the grooming experience smooth and simple for both you and your furry companion.</p>
+        </div>
+
+        <div class="process-timeline-container fade-in-up delay-200">
+          <div class="process-timeline-line"></div>
+          <div class="process-timeline">
+            <!-- Step 1 -->
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <h3 class="step-title">Book Online</h3>
+              <p class="step-desc">Choose a service, select a date and time that fits your schedule, and provide pet details.</p>
+            </div>
+            <!-- Step 2 -->
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <h3 class="step-title">Drop Off Your Pet</h3>
+              <p class="step-desc">Bring your pet in for a quick consultation where we discuss preferences and analyze their coat.</p>
+            </div>
+            <!-- Step 3 -->
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <h3 class="step-title">Pick Up Happy & Clean</h3>
+              <p class="step-desc">Receive a text when they are ready. Pick up your clean, relaxed pet looking and smelling wonderful!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Trust Section -->
+    <section id="about" class="about-section section-padding">
+      <div class="container about-container">
+        <div class="about-image-wrapper fade-in-up">
+          <div class="about-image-glow"></div>
+          <div class="about-image-container">
+            <img src="/images/about-groomer.png" alt="Groomer gently brushing a clean dog" class="about-img" loading="lazy">
+          </div>
+          <div class="about-experience-badge">
+            <span class="exp-number">10+</span>
+            <span class="exp-text">Years of Gentle Care</span>
+          </div>
+        </div>
+
+        <div class="about-content fade-in-up delay-200">
+          <span class="section-subtitle">Our Philosophy</span>
+          <h2 class="section-title">Caring for Your Pet Like Our Own</h2>
+          <p class="about-text">
+            We believe every pet deserves to look and feel their best. Our certified groomers use only gentle, eco-friendly products in a calm, clean environment — because your pet's comfort comes first.
+          </p>
+          <p class="about-trust-statement">
+            <i data-lucide="heart" class="heart-icon"></i> Trusted by <strong>1,200+</strong> pet owners in Seattle
+          </p>
+
+          <div class="trust-badges-grid">
+            <div class="trust-badge">
+              <span class="badge-icon-wrapper"><i data-lucide="award"></i></span>
+              <div class="trust-badge-info">
+                <h4>Certified Groomers</h4>
+                <p>IPG certified professional pet stylists.</p>
+              </div>
+            </div>
+            <div class="trust-badge">
+              <span class="badge-icon-wrapper"><i data-lucide="smile"></i></span>
+              <div class="trust-badge-info">
+                <h4>Gentle Handling</h4>
+                <p>Fear-free techniques for a calm visit.</p>
+              </div>
+            </div>
+            <div class="trust-badge">
+              <span class="badge-icon-wrapper"><i data-lucide="leaf"></i></span>
+              <div class="trust-badge-info">
+                <h4>Eco Products</h4>
+                <p>100% natural, biodegradable shampoos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section section-padding bg-cream-dark">
+      <div class="container">
+        <div class="section-header text-center fade-in-up">
+          <span class="section-subtitle">Fair & Transparent</span>
+          <h2 class="section-title">Simple Pricing Tiers</h2>
+          <p class="section-text">Pricing varies slightly depending on coat condition and behavior. We never charge hidden fees.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Small Breeds -->
+          <div class="pricing-card fade-in-up delay-100">
+            <div class="pricing-header">
+              <h3 class="tier-name">Small Breeds</h3>
+              <p class="tier-weight">Up to 25 lbs</p>
+              <div class="tier-price">
+                <span class="price-symbol">$</span>
+                <span class="price-value">55</span>
+                <span class="price-term">/visit</span>
+              </div>
+              <p class="tier-examples">Toy Poodle, Shih Tzu, Yorkie, Pug</p>
+            </div>
+            <div class="pricing-body">
+              <ul class="pricing-features">
+                <li><i data-lucide="check" class="feature-check"></i> Gentle Warm Water Bath</li>
+                <li><i data-lucide="check" class="feature-check"></i> High-Velocity Blow Dry</li>
+                <li><i data-lucide="check" class="feature-check"></i> Brush Out & Detangle</li>
+                <li><i data-lucide="check" class="feature-check"></i> Nail Trimming & Buffing</li>
+                <li><i data-lucide="check" class="feature-check"></i> Ear Cleaning & De-plucking</li>
+                <li><i data-lucide="x" class="feature-cross"></i> Scissors Breed-Standard Trim</li>
+              </ul>
+            </div>
+            <div class="pricing-footer">
+              <a href="#booking" class="btn btn-outline btn-full">Book Small Breed</a>
+            </div>
+          </div>
+
+          <!-- Medium Breeds - Most Popular -->
+          <div class="pricing-card popular fade-in-up delay-200">
+            <div class="popular-badge">Most Popular</div>
+            <div class="pricing-header">
+              <h3 class="tier-name">Medium Breeds</h3>
+              <p class="tier-weight">26 - 50 lbs</p>
+              <div class="tier-price">
+                <span class="price-symbol">$</span>
+                <span class="price-value">75</span>
+                <span class="price-term">/visit</span>
+              </div>
+              <p class="tier-examples">Cocker Spaniel, Corgi, Beagle, Frenchie</p>
+            </div>
+            <div class="pricing-body">
+              <ul class="pricing-features">
+                <li><i data-lucide="check" class="feature-check"></i> Gentle Warm Water Bath</li>
+                <li><i data-lucide="check" class="feature-check"></i> High-Velocity Blow Dry</li>
+                <li><i data-lucide="check" class="feature-check"></i> Brush Out & Detangle</li>
+                <li><i data-lucide="check" class="feature-check"></i> Nail Trimming & Buffing</li>
+                <li><i data-lucide="check" class="feature-check"></i> Ear Cleaning & De-plucking</li>
+                <li><i data-lucide="check" class="feature-check"></i> Scissors Breed-Standard Trim</li>
+              </ul>
+            </div>
+            <div class="pricing-footer">
+              <a href="#booking" class="btn btn-primary btn-full">Book Medium Breed</a>
+            </div>
+          </div>
+
+          <!-- Large Breeds -->
+          <div class="pricing-card fade-in-up delay-300">
+            <div class="pricing-header">
+              <h3 class="tier-name">Large Breeds</h3>
+              <p class="tier-weight">51+ lbs</p>
+              <div class="tier-price">
+                <span class="price-symbol">$</span>
+                <span class="price-value">95</span>
+                <span class="price-term">/visit</span>
+              </div>
+              <p class="tier-examples">Golden Retriever, Lab, German Shepherd</p>
+            </div>
+            <div class="pricing-body">
+              <ul class="pricing-features">
+                <li><i data-lucide="check" class="feature-check"></i> Gentle Warm Water Bath</li>
+                <li><i data-lucide="check" class="feature-check"></i> High-Velocity Blow Dry</li>
+                <li><i data-lucide="check" class="feature-check"></i> Premium De-shedding Brush</li>
+                <li><i data-lucide="check" class="feature-check"></i> Nail Trimming & Buffing</li>
+                <li><i data-lucide="check" class="feature-check"></i> Ear Cleaning & De-plucking</li>
+                <li><i data-lucide="check" class="feature-check"></i> Scissors Breed-Standard Trim</li>
+              </ul>
+            </div>
+            <div class="pricing-footer">
+              <a href="#booking" class="btn btn-outline btn-full">Book Large Breed</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-notes text-center fade-in-up">
+          <p><i data-lucide="info" class="info-icon"></i> Extremely matted coats or behavioral challenges may incur additional fees. We will consult with you beforehand.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section section-padding">
+      <div class="container">
+        <div class="section-header text-center fade-in-up">
+          <span class="section-subtitle">Client Stories</span>
+          <h2 class="section-title">What Pet Parents Say</h2>
+          <p class="section-text">Read notes from the wonderful families we serve everyday in our community.</p>
+        </div>
+
+        <div class="testimonials-slider-container fade-in-up delay-200">
+          <div class="testimonials-wrapper" id="testimonialsWrapper">
+            
+            <!-- Slide 1 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">
+                  <i data-lucide="star" class="star-filled"></i>
+                  <i data-lucide="star" class="star-filled"></i>
+                  <i data-lucide="star" class="star-filled"></i>
+                  <i data-lucide="star" class="star-filled"></i>
+                  <i data-lucide="star" class="star-filled"></i>
+                </div>
+                <blockquote class="testimonial-quote">
+                  "I was so nervous to bring Cooper for his first groom, but the team at Velvet Paws was incredibly gentle. He came out looking handsome, smelling amazing, and most importantly, totally relaxed!"
+                </blockquote>
+                <div class="testimonial-author">
+                  <div class="author-img-wrapper">
+                    <img src="/images/pet-cooper.png" alt="Golden retriever Cooper" class="author-img" loading="lazy">
+                  </div>
+                  <div class="author-info">
+                    <span class="author-name">Sarah Jenkins</span>
+                    <span class="author-pet">Parent of Cooper (Golden Retriever)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">
+                  <i data-lucide="star" class="star-filled"></i>
+                  <i data-lucide="star" class="star-filled"></i>
+                  <i data-lucide="star" class="star-filled"></i>
+                  <i data-lucide="star" class="star-filled"></i>
+                  <i data-lucide="star" class="star-filled"></i>
+                </div>
+                <blockquote class="testimonial-quote">
+                  "Absolutely the best nail trim my nervous pug has ever had. Their 'fear-free' approach is real. No shaking, no crying, just calm and quick work. Velvet Paws is a game-changer!"
+                </blockquote>
+                <div class="testimonial-author">
+                  <div class="author-img-wrapper">
+                    <img src="/images/pet-oliver.png" alt="Pug Oliver" class="author-img" loading="lazy">
+                  </div>
+                  <div class="author-info">
+                    <span class="author-name">David Thorne</span>
+                    <span class="author-pet">Parent of Oliver (Pug)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">
+                  <i data-lucide="star" class="star-filled"></i>
+                  <i data-lucide="star" class="star-filled"></i>
+                  <i data-lucide="star" class="star-filled"></i>
+                  <i data-lucide="star" class="star-filled"></i>
+                  <i data-lucide="star" class="star-filled"></i>
+                </div>
+                <blockquote class="testimonial-quote">
+                  "The de-shedding treatment is magic. Maya is a husky mix and usually drops hair everywhere, but after her session at Velvet Paws, shedding was reduced dramatically. She looks so glossy!"
+                </blockquote>
+                <div class="testimonial-author">
+                  <div class="author-img-wrapper">
+                    <img src="/images/pet-maya.png" alt="Husky Maya" class="author-img" loading="lazy">
+                  </div>
+                  <div class="author-info">
+                    <span class="author-name">Elena Rostova</span>
+                    <span class="author-pet">Parent of Maya (Husky Mix)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Slider Controls -->
+          <div class="slider-controls">
+            <button class="slider-arrow prev-arrow" id="prevSlide" aria-label="Previous Testimonial">
+              <i data-lucide="chevron-left"></i>
+            </button>
+            <div class="slider-dots" id="sliderDots">
+              <!-- Dynamically populated -->
+            </div>
+            <button class="slider-arrow next-arrow" id="nextSlide" aria-label="Next Testimonial">
+              <i data-lucide="chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking & Contact Section -->
+    <section id="booking" class="booking-section section-padding bg-cream-dark">
+      <div class="container booking-container">
+        
+        <!-- Form Column -->
+        <div class="booking-form-wrapper fade-in-up">
+          <div class="booking-form-header">
+            <h2 class="section-title">Schedule a Spa Day</h2>
+            <p>Fill out our short request form, and our coordinator will confirm your spot shortly.</p>
+          </div>
+          
+          <form id="bookingForm" class="booking-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="ownerName">Your Name *</label>
+                <input type="text" id="ownerName" name="ownerName" required placeholder="Jane Doe">
+                <span class="error-msg">Please enter your name</span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="(206) 555-0199">
+                <span class="error-msg">Please enter a valid phone number</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="petName">Pet's Name *</label>
+                <input type="text" id="petName" name="petName" required placeholder="Fluffy">
+                <span class="error-msg">Please enter your pet's name</span>
+              </div>
+              <div class="form-group">
+                <label for="breedSize">Breed Size *</label>
+                <select id="breedSize" name="breedSize" required>
+                  <option value="" disabled selected>Select size...</option>
+                  <option value="small">Small Breed (Up to 25 lbs)</option>
+                  <option value="medium">Medium Breed (26-50 lbs)</option>
+                  <option value="large">Large Breed (51+ lbs)</option>
+                </select>
+                <span class="error-msg">Please select a breed size</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="service">Select Service *</label>
+                <select id="service" name="service" required>
+                  <option value="" disabled selected>Select service...</option>
+                  <option value="bath">Bath & Blow Dry</option>
+                  <option value="groom">Full Groom</option>
+                  <option value="nail">Nail Trim & File</option>
+                  <option value="teeth">Teeth Cleaning</option>
+                  <option value="deshed">De-shedding Treatment</option>
+                  <option value="puppy">Puppy First Groom</option>
+                </select>
+                <span class="error-msg">Please select a service</span>
+              </div>
+              <div class="form-group">
+                <label for="date">Preferred Date *</label>
+                <input type="date" id="date" name="date" required>
+                <span class="error-msg">Please choose a date</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="notes">Special Requirements / Notes (Optional)</label>
+              <textarea id="notes" name="notes" rows="3" placeholder="Tell us about allergies, fears, or physical conditions..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full btn-lg">Request Appointment</button>
+          </form>
+        </div>
+
+        <!-- Info Column & Map -->
+        <div class="contact-info-wrapper fade-in-up delay-200">
+          <div class="info-card">
+            <h3>Visit the Spa</h3>
+            
+            <div class="info-item">
+              <span class="info-icon-wrapper"><i data-lucide="map-pin"></i></span>
+              <div class="info-text">
+                <strong>Address</strong>
+                <p>1208 Pine Street, Seattle, WA 98101</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span class="info-icon-wrapper"><i data-lucide="clock"></i></span>
+              <div class="info-text">
+                <strong>Hours of Operation</strong>
+                <p>Monday – Saturday: 8:00 AM – 6:00 PM<br>Sunday: Closed</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span class="info-icon-wrapper"><i data-lucide="phone"></i></span>
+              <div class="info-text">
+                <strong>Call / Text</strong>
+                <p>(206) 555-0145</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span class="info-icon-wrapper"><i data-lucide="mail"></i></span>
+              <div class="info-text">
+                <strong>Email</strong>
+                <p>hello@velvetpaws.com</p>
+              </div>
+            </div>
+
+            <div class="social-links-block">
+              <strong>Follow Us on Instagram</strong>
+              <p>We post client transformation photos daily!</p>
+              <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                <a href="#" class="social-icon" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                <a href="#" class="social-icon" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Styled Map -->
+          <div class="map-container-wrapper">
+            <div id="map" class="map-canvas"></div>
+            <div class="map-loading-placeholder">
+              <i data-lucide="map" class="map-placeholder-icon"></i>
+              <span>Loading SPA Location Map...</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-icon"><i data-lucide="scissors"></i></span>
+          <span class="logo-text">Velvet Paws</span>
+        </a>
+        <p class="footer-tagline">Stress-free, gentle grooming using eco-friendly products. Your pet's home away from home.</p>
+      </div>
+
+      <div class="footer-nav">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#booking">Book Now</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-instagram-feed">
+        <h4>Instagram Gallery</h4>
+        <div class="insta-grid">
+          <div class="insta-item">
+            <img src="/images/insta1.png" alt="Groomed golden retriever" loading="lazy">
+            <div class="insta-overlay"><i data-lucide="instagram"></i></div>
+          </div>
+          <div class="insta-item">
+            <img src="/images/insta2.png" alt="Clean pug smiling" loading="lazy">
+            <div class="insta-overlay"><i data-lucide="instagram"></i></div>
+          </div>
+          <div class="insta-item">
+            <img src="/images/insta3.png" alt="Groomer styling a poodle" loading="lazy">
+            <div class="insta-overlay"><i data-lucide="instagram"></i></div>
+          </div>
+          <div class="insta-item">
+            <img src="/images/insta4.png" alt="Happy wet dog in tub" loading="lazy">
+            <div class="insta-overlay"><i data-lucide="instagram"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="copyright">&copy; 2026 Velvet Paws Spa. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <span class="footer-separator">•</span>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Booking Success Modal -->
+  <div class="booking-modal-overlay" id="successModal">
+    <div class="booking-modal-card">
+      <button class="modal-close" id="closeModal" aria-label="Close dialog">&times;</button>
+      <div class="modal-success-icon">
+        <i data-lucide="check-circle-2"></i>
+      </div>
+      <h3 class="modal-title">Booking Requested!</h3>
+      <p class="modal-text">
+        Thank you, <strong id="summaryOwner">Jane</strong>! We have received your request to groom <strong id="summaryPet">Fluffy</strong> for <strong id="summaryService">Bath & Blow Dry</strong> on <strong id="summaryDate">June 25, 2026</strong>.
+      </p>
+      <p class="modal-subtext">
+        Our receptionist will call/text you at <strong id="summaryPhone">(206) 555-0199</strong> in the next 2 hours to confirm your final booking time.
+      </p>
+      <button class="btn btn-primary" id="btnModalOk">Awesome!</button>
+    </div>
+  </div>
+
+  <!-- Leaflet Map JS for interactive map -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
